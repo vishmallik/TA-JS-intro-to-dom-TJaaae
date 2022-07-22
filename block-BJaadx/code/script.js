@@ -6,19 +6,16 @@ document.title = "Hello Altcampus1";
 //    - Select the `h1` element and change the value to `Learning DOM`
 document.body.children[0].innerText = "Learning DOM";
 //    - Select the first `li` element inside the `ul` with class `topics` and change the innerText to `all about document`
-document.querySelector(".topics").firstElementChild.innerText =
-  "all about documents";
+document.body.children[5].children[0].innerText = `all about document`;
 //    - Select the input element with name `email`
-document.getElementsByName("email");
-//OR
-document.querySelector("input[name=email]");
+document.body.children[6].children[2];
 
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
 let ul = document.querySelector(".topics");
 console.log(ul.children.length);
 
 // 4. Select the first input using the `type` selector and store them in variable named `emailInput`
-let emailInput = document.querySelector("input[type=email]");
+let emailInput = document.querySelector("input");
 
 // 5. Select the ul element using class selector and store in `topics`
 let topics = document.querySelector(".topics");
