@@ -40,7 +40,7 @@ let allHrsArrayImage = Array.from(allHrsImage);
 allHrsArrayImage.map((ele) => (ele.style.border = "2px solid purple"));
 
 // Hide the box number 17 (last box).
-document.querySelector(".seventeen").remove();
+document.querySelector(".seventeen").style.display = "none";
 
 // Change the border of all the hr element from solid to dashed type
 allHrsArray.map((ele) => (ele.style.borderStyle = "dashed"));
@@ -50,8 +50,8 @@ let para = document.createElement("p");
 para.innerText =
   "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure.";
 // Remove all the elements from box 1
-let boxOne = document.querySelector(".one").children;
-Array.from(boxOne).map((ele) => ele.remove());
+let boxOne = document.querySelector(".one");
+boxOne.innerHTML = "";
 // Replace all the elements inside box 1 with the para (you created above)
 document.querySelector(".one").append(para);
 /* Walking the DOM
@@ -157,8 +157,8 @@ for (let i = 0; i < 2; i++) {
 // Append the imgElm to the box no 7
 boxSeven.append(imgElm);
 // Change the width and height of the image to `100%`
-boxSeven.lastElementChild.style.width = "100%";
-boxSeven.lastElementChild.style.height = "100%";
+imgElm.style.width = "100%";
+imgElm.style.height = "100%";
 
 // Select the box 5 using class five
 let boxFive = document.querySelector(".five");
