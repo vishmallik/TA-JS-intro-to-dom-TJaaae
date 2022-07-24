@@ -65,9 +65,9 @@ function createTodoList(arr) {
   let ul = document.createElement("ul");
   arr.forEach((elm) => {
     let li = document.createElement("li");
-    elm.isDone
-      ? (li.innerHTML = `<p>${elm.name}<p> <input type='checkbox' checked name="" id =""><span>X</span>`)
-      : (li.innerHTML = `<p>${elm.name}<p> <input type='checkbox' unchecked name="" id =""><span></span>`);
+    li.innerHTML = `<p>${elm.name}<p> <input type='checkbox' ${
+      elm.isDone ? "checked" : ""
+    } name="" id =""><span>X</span>`;
     ul.append(li);
   });
   document.body.append(ul);
